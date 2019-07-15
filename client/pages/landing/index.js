@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/rocket.png';
-import './index.css';
+import FullPage from '../../components/FullPage';
+import Card from '../../components/Card';
+import Title from '../../components/Title';
+import RocketImage from '../../assets/rocket.png';
+import RocketAnimation from './components/RocketAnimation';
 
 class Landing extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="Card">
-          <img src={logo} className="Rocket" alt="Rocket Lauching" />
-          <h1 className="CardTitle">We have liftoff</h1>
-          <p className="CardText">
+      <FullPage>
+        <Card>
+          <RocketAnimation src={RocketImage} alt="Rocket Lauching" />
+          <Title>We have liftoff</Title>
+          <p>
             Check out the
             {' '}
             <Link className="ApiLink" to="/example">API Test Page</Link>
           </p>
-        </div>
-
-      </div>
+        </Card>
+      </FullPage>
     );
   }
 }

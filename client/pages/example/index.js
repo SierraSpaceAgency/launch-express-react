@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import './index.css';
+import FullPage from '../../components/FullPage';
+import Card from '../../components/Card';
+import Title from '../../components/Title';
+import Greeting from './components/Greeting';
 
 class Example extends Component {
   constructor(props) {
@@ -27,14 +30,14 @@ class Example extends Component {
   render() {
     const { greeting } = this.state;
     return (
-      <div className="App">
-        <div className="Card">
-          <h1 className="CardTitle">Check it out</h1>
-          <p className="CardText Greeting">
+      <FullPage>
+        <Card>
+          <Title>Check it out</Title>
+          <Greeting>
             {greeting}
-          </p>
-        </div>
-      </div>
+          </Greeting>
+        </Card>
+      </FullPage>
     );
   }
 }
