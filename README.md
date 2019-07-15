@@ -5,6 +5,7 @@ Launchpad for a simple production-grade full stack web app
 ## Features
 
 * React
+* Styled Components
 * Webpack
 * ESLint
 * Hot Reloading
